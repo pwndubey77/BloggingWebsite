@@ -12,7 +12,7 @@
     <link href='css\font.css' rel='stylesheet' type='text/css'>
 
 </head>
-<body>
+<body class="home-body">
     <div id="main-container-div">
 
         <div class="header">
@@ -21,14 +21,14 @@
             <button class="topButtons" id="signUpBtn" >Sign Up</button>
             <button class="topButtons" id="signInBtn">Sign In</button>
             <a id="pageTitle" class="logo-title">ScriBBler</a>
-            <p class="subHeading">Explore,Imagine,Create</p>
+            <p class="subHeading">Explore, Imagine, Create</p>
 
         </div>
            
         <div class="postButtons">
 
             <!-- Insert code for All Posts & Create Post button here -->
-            <a href="html\bloglist.html"><button id="allPostsBtn">All Posts</button></a>
+            <button id="allPostsBtn">All Posts</button>
             <button id="createPostbtn">Create Post</button>
             
             
@@ -44,7 +44,7 @@
               <div class="modal-content">
                 <span class="close" id="signInClose">&times;</span>
                 <h2 class="modal-header" > Welcome back!</h2>
-                
+                <hr>
                 <form class="sign-in-form">
                     
                     <label for='loginUserName'> Username </label>
@@ -52,7 +52,8 @@
                     <label for='loginPassword'> Password </label>
                     <input type="password" class="form-field" id="loginPassword" placeholder="Enter Password" required><br>
                     <input type="Submit" class="submit-buttons" value="Sign In">
-					<p class="redeirection-text">Not a member?<a href="#SignUpModal" id="redirectToSignUp">Sign Up</a></p>
+                    <p class="redirection-text">Not a member? <span class="modal-link" id="redirectToSignUp">Sign Up</span></p>
+                    
 
                 </form>
               </div>
@@ -70,8 +71,8 @@
               <!-- Modal content -->
               <div class="modal-content">
                 <span class="close" id='signUpClose' >&times;</span>
-                <h2 class="modal-header" > Get Started!</h2>
-                
+                <h2 class="modal-header" > Get Started</h2>
+                <hr>
                 <form class="sign-up-form">
                     
                     
@@ -100,17 +101,18 @@
         <div id="createPostModal" class="modal">
             
               <!-- Modal content -->
-              <div class="modal-content">
+              <div class="modal-content-createPost">
                 <span class="close" id='createClose' >&times;</span>
-                <h2 align="center"> Pen your post </h2>
+                <h2 class="modal-header"> Pen your post </h2>
                 
                 <form class="create-post-form">
                     
                     <label for="postTitle">Title:</label>
+                    <br>
                     <input type="text" class="form-field" id="postTitle" required>
                     <br>
                     <label for="postContent ">Content:</label>
-                    <textarea rows="18" class="form-field" id="postContent" required></textarea>
+                    <textarea rows="30" class="form-field" id="postContent" required></textarea>
 					
                     <input type="submit" class="submit-buttons" id="postSubmitButton"value="Create">
 
